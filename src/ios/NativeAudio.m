@@ -7,7 +7,7 @@
 //
 
 #import "NativeAudio.h"
-#import <AVFoundation/AVAudioSession.h>
+#import <AVFoundation/AVFoundation.h>
 
 @implementation NativeAudio
 
