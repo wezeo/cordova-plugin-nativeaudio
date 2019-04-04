@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    id="cordova-plugin-nativeaudio"
-    version="3.0.9">
-      
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-nativeaudio"
+        version="3.1.0">
+
     <name>Cordova Native Audio</name>
     <author>Andrew Trice, Raymond Xie, Sidney Bofah and other contributors</author>
-	<description>Cordova/PhoneGap Plugin for low latency Native Audio Playback, must have for HTML5 games</description>
-    
-	<license>MIT</license>
-	<keywords>audio,fx,music,mp3,game,rjfun</keywords>
-    <repo>https://github.com/floatinghotpot/cordova-plugin-nativeaudio.git</repo>
-    <issue>https://github.com/floatinghotpot/cordova-plugin-nativeaudio/issues</issue>
+    <description>Cordova/PhoneGap Plugin for low latency Native Audio Playback, must have for HTML5 games</description>
 
-	<engines>
-	    <engine name="cordova" version=">=3.5" />
-	</engines>
+    <license>MIT</license>
+    <keywords>audio,fx,music,mp3,game,rjfun</keywords>
+    <repo>https://github.com/wizpanda/cordova-plugin-nativeaudio.git</repo>
+    <issue>https://github.com/wizpanda/cordova-plugin-nativeaudio/issues</issue>
+
+    <engines>
+        <engine name="cordova" version=">=3.5"/>
+    </engines>
 
     <!-- android -->
     <platform name="android">
@@ -64,12 +64,12 @@
 
     </platform>
 
-     <!-- browser -->
+    <!-- browser -->
     <platform name="browser">
         <js-module name="NativeAudioBrowser" src="www/nativeaudio-browser.js">
-            <clobbers target="cordova.plugins.NativeAudio" />
-			<clobbers target="plugins.NativeAudio" />
-		</js-module>
+            <clobbers target="cordova.plugins.NativeAudio"/>
+            <clobbers target="plugins.NativeAudio"/>
+        </js-module>
     </platform>
 
 </plugin>

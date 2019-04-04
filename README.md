@@ -2,6 +2,12 @@
 
 Cordova / PhoneGap 3.5+ extension for Native Audio playback, aimed at HTML5 gaming and audio applications which require minimum latency, polyphony and concurrency.
 
+## Difference From Original Plugin
+
+1. Incorporated commits from https://github.com/floatinghotpot/cordova-plugin-nativeaudio/pull/153
+2. Incorporated commits from https://github.com/floatinghotpot/cordova-plugin-nativeaudio/pull/139
+3. Removing deprecated `AVAudioSession.h` & `AVAudioPlayer.h` import for iOS
+
 ## Contents
 
 1. [Description](#description)
@@ -39,14 +45,14 @@ Download it at the ngCordova [website](http://www.ngcordova.com) or the [reposit
 
 ## Supported Platforms
 
-* iOS (tested with 7.1.2, 8.1.3)
-* Android (tested in API levels 14 - 21)
+* iOS
+* Android
 
 ## Installation
 
 Via Cordova CLI:
 ```bash
-cordova plugin add cordova-plugin-nativeaudio
+cordova plugin add https://github.com/wizpanda/cordova-plugin-nativeaudio.git
 ```
 
 ## Usage
@@ -168,34 +174,34 @@ Changes the volume for preloaded complex assets.
 In this example, the resources reside in a relative path under the Cordova root folder "www/".
 
 ```javascript
-if( window.plugins && window.plugins.NativeAudio ) {
-	
-	// Preload audio resources
-	window.plugins.NativeAudio.preloadComplex( 'music', 'audio/music.mp3', 1, 1, 0, function(msg){
-	}, function(msg){
-		console.log( 'error: ' + msg );
-	});
-	
-	window.plugins.NativeAudio.preloadSimple( 'click', 'audio/click.mp3', function(msg){
-	}, function(msg){
-		console.log( 'error: ' + msg );
-	});
+if (window.plugins && window.plugins.NativeAudio) {
+
+    // Preload audio resources
+    window.plugins.NativeAudio.preloadComplex('music', 'audio/music.mp3', 1, 1, 0, function (msg) {
+    }, function (msg) {
+        console.log('error: ' + msg);
+    });
+
+    window.plugins.NativeAudio.preloadSimple('click', 'audio/click.mp3', function (msg) {
+    }, function (msg) {
+        console.log('error: ' + msg);
+    });
 
 
-	// Play
-	window.plugins.NativeAudio.play( 'click' );
-	window.plugins.NativeAudio.loop( 'music' );
+    // Play
+    window.plugins.NativeAudio.play('click');
+    window.plugins.NativeAudio.loop('music');
 
 
-	// Stop multichannel clip after 60 seconds
-	window.setTimeout( function(){
+    // Stop multichannel clip after 60 seconds
+    window.setTimeout(function () {
 
-		window.plugins.NativeAudio.stop( 'music' );
-			
-		window.plugins.NativeAudio.unload( 'music' );
-		window.plugins.NativeAudio.unload( 'click' );
+        window.plugins.NativeAudio.stop('music');
 
-	}, 1000 * 60 );
+        window.plugins.NativeAudio.unload('music');
+        window.plugins.NativeAudio.unload('click');
+
+    }, 1000 * 60);
 }
 ```
 
