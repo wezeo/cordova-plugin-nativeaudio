@@ -7,7 +7,7 @@ Cordova / PhoneGap 3.5+ extension for Native Audio playback, aimed at HTML5 gami
 1. Incorporated commits from https://github.com/floatinghotpot/cordova-plugin-nativeaudio/pull/153
 2. Incorporated commits from https://github.com/floatinghotpot/cordova-plugin-nativeaudio/pull/139
 3. Removing deprecated `AVAudioSession.h` & `AVAudioPlayer.h` import for iOS
-4. Closed [issues](wizpanda/cordova-plugin-nativeaudio/issues?q=is%3Aissue+is%3Aclosed)
+4. Closed [issues](https://github.com/wizpanda/cordova-plugin-nativeaudio/issues?q=is%3Aissue+is%3Aclosed)
 
 ## Contents
 
